@@ -16,13 +16,13 @@ Este projeto foi desenvolvido como parte das atividades da disciplina **Programa
 
 - Armazenamento: todos os dados são salvos em um banco de dados.
 
-### Desenvolvedora
+#### Desenvolvedora
 Jéssica Leme Freitas
 
-### Disciplina
+#### Disciplina
 EC48B-C71 — Programação Web Back-End
 
-### Professores
+#### Professores
 - Prof.ª Monique Emídio de Oliveira
 
 - Prof. Willian Massami Watanabe
@@ -52,13 +52,13 @@ Para testar os endpoints da agenda eletrônica e visualizar os dados armazenados
 
 ####  Download do Insomnia
 
-Se ainda não tem o Insomnia instalado, baixe aqui: 🔗 https://insomnia.rest/download
+Se ainda não tem o Insomnia instalado, baixe em https://insomnia.rest/download
 
-### Endpoints da API
+## 🔗 Endpoints da API
 
 Abaixo estão os principais endpoints para testar a API:
 
-#### Criação de um usuário
+### Criação de um usuário
 
 - **Método:** `POST`
 - **URL:** `http://localhost:3000/user`
@@ -71,7 +71,7 @@ Abaixo estão os principais endpoints para testar a API:
 }
 ```
 
-#### Criação de um evento
+### Criação de um evento
 
 - **Método:** `POST`
 - **URL:** `http://localhost:3000/agenda`
@@ -84,7 +84,7 @@ Abaixo estão os principais endpoints para testar a API:
 }
 ```
 
-#### Criação de um lembrete
+### Criação de um lembrete
 
 - **Método:** `POST`
 - **URL:** `http://localhost:3000/notification`
