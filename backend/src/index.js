@@ -38,7 +38,6 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // Body Parser
   let body = '';
   req.on('data', chunk => {
     body += chunk.toString();
@@ -47,7 +46,6 @@ const server = http.createServer(async (req, res) => {
   req.on('end', async () => {
     req.body = body ? JSON.parse(body) : {};
 
-    // Encaminha para as rotas
     routes(req, res);
   });
 });

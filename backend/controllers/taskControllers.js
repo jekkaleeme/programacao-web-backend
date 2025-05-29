@@ -41,7 +41,7 @@ module.exports = {
       const task = await Task.findOneAndUpdate(
         { _id: req.params.id },
         req.body,
-        { new: true }  // Para retornar o documento atualizado
+        { new: true }
       );
 
       res.writeHead(200, { 'Content-Type': 'application/json' });

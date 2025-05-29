@@ -5,7 +5,7 @@ const NotificationController = require('./controllers/notificationControllers');
 module.exports = async (req, res) => {
   const { url, method } = req;
 
-  // Rota: /agenda
+  // EVENTOS
   if (url === '/task' && method === 'GET') {
     return TaskController.index(req, res);
   }
@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     return TaskController.delete(req, res);
   }
 
-  // Rota: /user
+  // USUÁRIOS
   if (url === '/user' && method === 'GET') {
     return UserController.index(req, res);
   }
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
     return UserController.delete(req, res);
   }
 
-  // Rota: /notification
+  // NITIFICAÇÕES
   if (url === '/notification' && method === 'GET') {
     return NotificationController.index(req, res);
   }
@@ -53,7 +53,7 @@ module.exports = async (req, res) => {
     return NotificationController.delete(req, res);
   }
 
-  // Rota não encontrada
+  // ROTA NÃO ENCONTRADA
   res.writeHead(404, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({ error: 'Rota não encontrada' }));
 };

@@ -40,8 +40,6 @@ module.exports = {
           res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: 'Erro interno do servidor' }));
         }
-    // res.writeHead(400, { 'Content-Type': 'application/json' });
-    // res.end(JSON.stringify({ error: 'Erro ao criar o usuário' }));
     }
   },
 
@@ -62,7 +60,7 @@ module.exports = {
       const user = await User.findOneAndUpdate(
         { _id: req.params.id },
         req.body,
-        { new: true }  // Para retornar o documento atualizado
+        { new: true }
       );
 
       res.writeHead(200, { 'Content-Type': 'application/json' });

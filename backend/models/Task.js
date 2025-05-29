@@ -18,8 +18,6 @@ const TaskSchema = new mongoose.Schema({
   },
   end_date: {
     type: Date,
-  //  required: [true, 'A data de término é obrigatória'],
-  // default: () => new Date(Date.now + 24 * 60 * 60 * 1000), // +1 dia
   },
   local: {
     type: String,
@@ -38,15 +36,15 @@ const TaskSchema = new mongoose.Schema({
   }
 });
 
-// ✅ Pre-save hook
+// ✅ pre-save hook
 TaskSchema.pre('save', function (next) {
   if (!this.end_date || this.isModified('start_date')) {
-    this.end_date = new Date(this.start_date.getTime() + 24 * 60 * 60 * 1000); // +1 dia
+    this.end_date = new Date(this.start_date.getTime() + 24 * 60 * 60 * 1000);  // adiciona 24 horas à data de início
   }
   next();
 });
 
-// ✅ Pre-update hook
+// ✅ pre-update hook
 TaskSchema.pre('findOneAndUpdate', function (next) {
   const update = this.getUpdate();
 
