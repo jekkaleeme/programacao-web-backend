@@ -4,20 +4,28 @@ const mongoose = require('mongoose');
 const NotificationSchema = new mongoose.Schema({
   title: {
     type: String,
-    default: null,
+    required: [true, 'O título é obrigatório'],
+
   },
   date: {
     type: Date,
-    required: true,
+    required: [true, 'A data é obrigatória'],
     default: Date.now,
-  },
-  type: {
-    type: String,
-    required: true,
   },
   task:{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Task',
+    required: false,
+  },
+    timestamps: {
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now,
+    }
   }
 });
 

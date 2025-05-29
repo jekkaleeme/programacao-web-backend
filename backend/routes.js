@@ -1,26 +1,59 @@
-const express = require('express');
 const TaskController = require('./controllers/taskControllers');
 const UserController = require('./controllers/userControllers');
 const NotificationController = require('./controllers/notificationControllers');
-const Task = require('./models/Task');
-const User = require('./models/User');
-const Notification = require('./models/Notification');
 
-const routes = new express.Router();
+module.exports = async (req, res) => {
+  const { url, method } = req;
 
-routes.get('/agenda', TaskController.index);
-routes.post('/agenda', TaskController.store);
-routes.put('/agenda/:id', TaskController.update);
-routes.delete('/agenda/:id', TaskController.delete);
+  // Rota: /agenda
+  if (url === '/task' && method === 'GET') {
+    return TaskController.index(req, res);
+  }
+  if (url === '/task' && method === 'POST') {
+    return TaskController.store(req, res);
+  }
+  if (url.startsWith('/task/') && method === 'PUT') {
+    req.params = { id: url.split('/')[2] };
+    return TaskController.update(req, res);
+  }
+  if (url.startsWith('/task/') && method === 'DELETE') {
+    req.params = { id: url.split('/')[2] };
+    return TaskController.delete(req, res);
+  }
 
-routes.get('/user', UserController.index);
-routes.post('/user', UserController.store);
-routes.put('/user/:id', UserController.update);
-routes.delete('/user/:id', UserController.delete);
+  // Rota: /user
+  if (url === '/user' && method === 'GET') {
+    return UserController.index(req, res);
+  }
+  if (url === '/user' && method === 'POST') {
+    return UserController.store(req, res);
+  }
+  if (url.startsWith('/user/') && method === 'PUT') {
+    req.params = { id: url.split('/')[2] };
+    return UserController.update(req, res);
+  }
+  if (url.startsWith('/user/') && method === 'DELETE') {
+    req.params = { id: url.split('/')[2] };
+    return UserController.delete(req, res);
+  }
 
-routes.get('/notification', NotificationController.index);
-routes.post('/notification', NotificationController.store);
-routes.put('/notification/:id', NotificationController.update);
-routes.delete('/notification/:id', NotificationController.delete);
+  // Rota: /notification
+  if (url === '/notification' && method === 'GET') {
+    return NotificationController.index(req, res);
+  }
+  if (url === '/notification' && method === 'POST') {
+    return NotificationController.store(req, res);
+  }
+  if (url.startsWith('/notification/') && method === 'PUT') {
+    req.params = { id: url.split('/')[2] };
+    return NotificationController.update(req, res);
+  }
+  if (url.startsWith('/notification/') && method === 'DELETE') {
+    req.params = { id: url.split('/')[2] };
+    return NotificationController.delete(req, res);
+  }
 
-module.exports = routes;
+  // Rota não encontrada
+  res.writeHead(404, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ error: 'Rota não encontrada' }));
+};

@@ -2,47 +2,64 @@ const Notification = require('../models/Notification');
 
 module.exports = {
   async index(req, res) {
-
     try {
       const notification = await Notification.find().sort('-createdAt');
 
-      return res.json(notification);
-
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(notification));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao listar as tarefas' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao listar as notificações' }));
     }
   },
 
   async store(req, res) {
     try {
-      const { title, date, type, task } = req.body;
+      const { title, date, task } = req.body;
+
       const notification = await Notification.create({
         title,
         date,
-        type,
-        task
+        task,
+        timestamps: {
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
       });
-      return res.json(notification);
+
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(notification));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao criar a tarefa' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao criar a notificação' }));
     }
   },
+
   async delete(req, res) {
-    try{
+    try {
       const notification = await Notification.findByIdAndDelete(req.params.id);
 
-      return res.json({ notification });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ notification }));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao deletar a tarefa' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao deletar a notificação' }));
     }
   },
-  async update(req, res) {
-    try{
-      const notification = await Notification.findOneAndUpdate({ _id: req.params.id }, req.body);
 
-      return res.json({ notification });
+  async update(req, res) {
+    try {
+      const notification = await Notification.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body,
+        { new: true }  // Para retornar o documento atualizado
+      );
+
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ notification }));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao atualizar a tarefa' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao atualizar a notificação' }));
     }
   }
 };

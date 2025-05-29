@@ -2,46 +2,65 @@ const Task = require('../models/Task');
 
 module.exports = {
   async index(req, res) {
-
     try {
       const task = await Task.find().sort('-createdAt');
 
-      return res.json(task);
-
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(task));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao listar as tarefas' });
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao listar as tarefas' }));
     }
   },
 
   async store(req, res) {
     try {
-      const { title, content, end_date } = req.body;
+      const { title, content, start_date, end_date } = req.body;
+
       const task = await Task.create({
         title,
         content,
-        end_date
+        start_date,
+        end_date,
+        timestamps: {
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
       });
-      return res.json(task);
+
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(task));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao criar a tarefa' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao criar a tarefa' }));
     }
   },
+
+  async update(req, res) {
+    try {
+      const task = await Task.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body,
+        { new: true }  // Para retornar o documento atualizado
+      );
+
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ task }));
+    } catch (error) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao atualizar a tarefa' }));
+    }
+  },
+
   async delete(req, res) {
-    try{
+    try {
       const task = await Task.findByIdAndDelete(req.params.id);
 
-      return res.json({ task });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ task }));
     } catch (error) {
-      return res.status(400).json({ error: 'Erro ao deletar a tarefa' });
-    }
-  },
-  async update(req, res) {
-    try{
-      const task = await Task.findOneAndUpdate({ _id: req.params.id }, req.body);
-
-      return res.json({ task });
-    } catch (error) {
-      return res.status(400).json({ error: 'Erro ao atualizar a tarefa' });
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Erro ao deletar a tarefa' }));
     }
   }
 };

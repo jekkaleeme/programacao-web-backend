@@ -27,6 +27,23 @@ EC48B-C71 — Programação Web Back-End
 
 - Prof. Willian Massami Watanabe
 
+## 🔗 Atualizações recentes
+
+#### 🛠️ Ajustes Gerais
+- ✅ Refatoração completa para utilização de **HTTP nativo**, eliminando a dependência do Express.
+- ✅ Adequação dos controladores para retorno de mensagens de **erro de validação** no formato JSON, com informações claras e detalhadas.
+- ✅ Reestruturação das rotas e fluxos para compatibilidade com **HTTP nativo**, sem utilização de middlewares ou bibliotecas externas para roteamento.
+- ✅ Adição de **timestamps** automáticos (`createdAt` e `updatedAt`) nos modelos.
+
+#### Usuário (User)
+- ✅ Campo `username` definido como **único** (*nota: ainda sem tratamento específico de erro para duplicatas*).
+- ✅ Campo `email` definido como **único** (*nota: ainda sem tratamento específico de erro para duplicatas*), com validação de formato **implementada e tratada**.
+
+####  Eventos (Task)
+- ✅ Inclusão do campo `start_date`.
+- ✅ Modificação na lógica de `end_date`, agora é automaticamente configurado para **1 dia após** a `start_date`.
+- ✅ Inclusão do novo campo `local` para especificação de **localização** do evento.
+
 ## 🔗 Iniciando o projeto
 
 ### Git
@@ -65,22 +82,24 @@ Abaixo estão os principais endpoints para testar a API:
 - **Corpo (JSON):**
 ```json
 {
-  "username": "usuário 01",
+  "username": "Caetano",
   "password": "123",
-  "email": "user@gmail.com"
+  "email": "caetano@gmail.com"
 }
 ```
 
 ### Criação de um evento
 
 - **Método:** `POST`
-- **URL:** `http://localhost:3000/agenda`
+- **URL:** `http://localhost:3000/task`
 - **Corpo (JSON):**
 ```json
 {
-  "title": "reunião com equipe",
+  "title": "reunião com a equipe de marketing",
   "content": null,
-  "end_date": "2025-05-20T23:59:00.000Z"
+  "local": "sala P202",
+  "start_date": "2025-06-01T15:00:00.000Z", // caso seja null será adicionado a data atual
+  "end_date": null,
 }
 ```
 
@@ -91,9 +110,8 @@ Abaixo estão os principais endpoints para testar a API:
 - **Corpo (JSON):**
 ```json
 {
-  "title": null,
-  "date": "2025-05-19T23:59:00.000Z",
-  "type": "email",
-  "task": null,
+  "title": "reunião em 15min",
+  "date": "2025-06-10T23:59:00.000Z",
+  "task": null // podemos relacionar com um evento ao adicionar o id
 }
 ```
