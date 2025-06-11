@@ -1,0 +1,176 @@
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-10T19:19:09.575Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-10T19:25:23.543Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:02:05.327Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:08:43.261Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:08:46.400Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:09:06.277Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:12:11.806Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:13:05.713Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:13:24.665Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:21:11.991Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+
+----- EXCEÇÃO -----
+Data e hora: 2025-06-11T12:44:08.285Z
+Mensagem: Erro no sistema de log
+Tipo: Error
+Descrição:
+Error: Erro no sistema de log
+    at Object.<anonymous> (C:\Users\jessi\OneDrive\Documentos\Códigos\programacao-web-backend\projeto_02\src\index.js:28:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
